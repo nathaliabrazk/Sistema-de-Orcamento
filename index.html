@@ -1,41 +1,50 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
-
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Formulário de cadastro</title>
+    <title>Exemplo de conexão com banco de dados</title>
 </head>
-
 <body>
-    <div class="container">
-        <div class="form-image">
-            <img src="assets/img/undraw_absorbed_in_re_ymd6.svg">
-        </div>
-        <div class="form">
-            <form action="#">
-                <div class="form-header">
-                    <div class="title">
-                        <h1>cadastre-se</h1>
-                    </div>
-                    <div class="login-button">
-                        <button><a href="#">Entrar</a></button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
+
+    <h1>Formulário de cadastro</h1>
+    <p>Preencha os campos a seguir:</p>
+
+    <form id = "myForm">
+        <label for = "nome">Nome:</label>
+        <input type = "text" id = "nome" name = "nome">
+        <label for = "email">Email:</label>
+        <input type = "text" id = "email" name = "email">
+        <input type = "submit" value = "Enviar">
+        
+        <input type = "submit" value = "Calcular valor">
+        <img src = "_.jpeg">
+        <img src = "283_38R$ _Luminária De Mesa Giratória, Decoração Criativa, Em Ferro, Estilo Nórdico, Para Decoração De Casa E Sala De Estar - Luminárias De Mesa - AliExpress.jpeg">
+        <img src = "Décor Astrológica_ Como adicionar um toque místico e trazer para sua casa essa tendência de decoração - FTCMAG.jpeg">
+        <img src = "𝚍 𝚛 𝚎 𝚊 𝚖 𝚐 𝚕 𝚘.jpeg">
+        <img src = "Luz noturna em forma de cacto.jpeg">
+    </form>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            var Nome = document.getElementById("nome").value;
+            var Email = document.getElementById("email").value;
+
+            /* Construindo string para passar parâmetros para o servidor (.JS)*/
+
+            var str = "http://localhost:8080/a.b?";  /* Após o ?, colocamos os dados do formulário */
+                str = str + "nome=" + Nome;
+                str = str + "&" + "email=" + Email;
+
+                window.location.href = str; /* Redirecionando para o servidor*/
+
+        });
+    </script>
+    
 </body>
-
 </html>
-
-
-
-
-
 
 
 
