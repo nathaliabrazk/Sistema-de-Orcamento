@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo de conexão com banco de dados</title>
+    <title>Cadastro de produtos</title>
 </head>
 <body>
 
@@ -17,13 +17,18 @@
         <label for = "email">Email:</label>
         <input type = "text" id = "email" name = "email">
         <input type = "submit" value = "Enviar">
-        
+            <br>
+                <br>
+        <!--Inserção da imagens -->
+        <img src = "_.jpeg" height="200" width="150">
+        <img src = "283_38R$ _Luminária De Mesa Giratória, Decoração Criativa, Em Ferro, Estilo Nórdico, Para Decoração De Casa E Sala De Estar - Luminárias De Mesa - AliExpress.jpeg" height="200" width="150">
+        <img src = "𝚍 𝚛 𝚎 𝚊 𝚖 𝚐 𝚕 𝚘.jpeg" height="200" width="150">
+        <img src = "Décor Astrológica_ Como adicionar um toque místico e trazer para sua casa essa tendência de decoração - FTCMAG.jpeg" height="200" width="150">
+        <img src = "Luz noturna em forma de cacto.jpeg" height="200" width="150">
+            <br>
         <input type = "submit" value = "Calcular valor">
-        <img src = "_.jpeg">
-        <img src = "283_38R$ _Luminária De Mesa Giratória, Decoração Criativa, Em Ferro, Estilo Nórdico, Para Decoração De Casa E Sala De Estar - Luminárias De Mesa - AliExpress.jpeg">
-        <img src = "Décor Astrológica_ Como adicionar um toque místico e trazer para sua casa essa tendência de decoração - FTCMAG.jpeg">
-        <img src = "𝚍 𝚛 𝚎 𝚊 𝚖 𝚐 𝚕 𝚘.jpeg">
-        <img src = "Luz noturna em forma de cacto.jpeg">
+
+        
     </form>
 
     <script>
@@ -31,6 +36,7 @@
             event.preventDefault();
             var Nome = document.getElementById("nome").value;
             var Email = document.getElementById("email").value;
+            var Calcular = document.getElementById("calcular").value;
 
             /* Construindo string para passar parâmetros para o servidor (.JS)*/
 
