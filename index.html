@@ -97,63 +97,17 @@
                         <br>
             </span>
             <input type = number name = "quantidade" size ="20">
-
         </div>
 
-        <p><center><input type = "submit" value = "Calcular valor"></center></p>
-        
         <style>
         div.box {
             width: 150px;
             display: inline-block;
         }
+
         </style>
 
-        <!--Inserção da imagens antigo
-            <p> Illuminated Planet </p>
-            <img src = "Illuminated planet.jpeg" height="300" width="250">  
-            <legend>R$155,90
-                <br>
-                (unidade)
-            </legend>
-    
-
-            <p> Bright Moon </p>
-            <img src = "BrightMoon.jpeg" height="300" width="250">  
-            <legend>R$137,90
-                <br>
-                (unidade)
-            </legend>
-
-            <p> Fairy Ferris Wheel </p>
-            <img src = "FairyFerrisWheel.jpeg" height="300" width="250">  
-            <legend>R$230,00
-                <br>
-                (unidade)
-            </legend>
-               
-            <p> Luminous Heart </p>
-            <img src = "LuminousHeart.jpeg" height="300" width="250">  
-            <legend>R$125,00
-                <br>
-                (unidade)
-            </legend>
-
-            <p> Light Cactus </p>
-            <img src = "LightCactus.jpeg" height="300" width="250">  
-            <legend>R$130,00
-                <br>
-                (unidade)
-            </legend>
-                
-            <br>
-                <br>
-                    <br>
-                        <br>
-                            <br>-->
-        
-
-        
+        <div><p><input type = "submit" value = "Calcular valor" text-align :center></p></div>
     </form>
 
     <script>
@@ -165,7 +119,7 @@
 
             /* Construindo string para passar parâmetros para o servidor (.JS)*/
 
-            var str = "http://localhost:8080/a.b?";  /* Após o ?, colocamos os dados do formulário */
+            var str = "http://localinstance:3306/a.b?";  /* Após o ?, colocamos os dados do formulário */
                 str = str + "nome=" + Nome;
                 str = str + "&" + "email=" + Email;
 
