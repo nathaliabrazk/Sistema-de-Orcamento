@@ -25,7 +25,7 @@
         <!--Inserção da imagens atual -->
         <div class="box">
             <p><center>Illuminated Planet</center></p>
-            <img src="Illuminated planet.jpeg"height="200" width="150"/>
+            <img src="Illuminated planet.jpeg" value= 155,90 height="200" width="150">
             <span><center>R$155,90
                 <br>
                 (unidade)
@@ -34,14 +34,13 @@
                             <br>
                     Quantidade</center>
                     <br>
-            </span>
-            <input type = number name = "quantidade" size ="20">
-        
+            </span><center>
+            <input type = number name = "Quantidade produto 1" min="0" max="1000" oninput="Calcula()" size ="20" value = 0>
         </div>
 
         <div class="box">
             <p><center>Bright Moon</center></p>
-            <img src="BrightMoon.jpeg"height="200" width="150"/>
+            <img src="BrightMoon.jpeg" value= 137,90 height="200" width="150"/>
             <span><center>R$137,90
                 <br>
                 (unidade)
@@ -50,13 +49,13 @@
                             <br>
                         Quantidade</center>
                         <br>
-            </span>
-            <input type = number name = "quantidade" size ="20">
-        </div>
+            </span><center>
+            <input type = number name = "Quantidade produto 2" min="0" max="1000" oninput="Calcula()" size ="20" value = 0>
+        </div></center>
 
         <div class="box">
             <p><center>Fairy Ferris Wheel</center></p>
-            <img src="FairyFerrisWheel.jpeg"height="200" width="150"/>
+            <img src="FairyFerrisWheel.jpeg" value= 230,00 height="200" width="150"/>
             <span><center>R$230,00
                 <br>
                 (unidade)
@@ -65,13 +64,13 @@
                             <br>
                         Quantidade</center>
                         <br>
-            </span>
-            <input type = number name = "quantidade" size ="20">
-        </div>
+            </span><center>
+            <input type = number name = "Quantidade produto 3" min="0" max="1000" oninput="Calcula()" size ="20" value = 0>
+        </div></center>
         
         <div class="box">
             <p><center>Luminous Heart</center></p>
-            <img src="LuminousHeart.jpeg"height="200" width="150"/>
+            <img src="LuminousHeart.jpeg"value= 125,00 height="200" width="150"/>
             <span><center>R$125,00
                 <br>
                 (unidade)
@@ -80,13 +79,13 @@
                             <br>
                         Quantidade</center>
                         <br>
-            </span>
-            <input type = number name = "quantidade" size ="20">
-        </div>
+            </span><center>
+            <input type = number name = "Quantidade produto 4" min="0" max="1000" oninput="Calcula()"size ="20" value = 0>
+        </div></center>
 
         <div class="box">
             <p><center>Light Cactus</center></p>
-            <img src="LightCactus.jpeg"height="200" width="150"/>
+            <img src="LightCactus.jpeg" value= 130,00 height="200" width="150"/>
             <span><center>R$130,00
                 <br>
                 (unidade)
@@ -95,10 +94,12 @@
                             <br>
                         Quantidade</center>
                         <br>
-            </span>
-            <input type = number name = "quantidade" size ="20">
+            </span><center>
+            <input type = number name = "Quantidade produto 5" min="0" max="1000" oninput="Calcula()" size ="50" value = 0 ></center>
         </div>
-
+        <br>
+            <br>
+                <br>
         <style>
         div.box {
             width: 150px;
@@ -106,11 +107,31 @@
         }
 
         </style>
-
-        <div><p><input type = "submit" value = "Calcular valor" text-align :center></p></div>
+        <form action="">
+        Total todos os produtos: <input type="text" id="final">
+        </form>
     </form>
 
     <script>
+
+        //Função para fazer o cálculo do valor final
+        function Calcula(){
+            var soma = 0;
+            var ipts = document.querySelectorAll('input[oninput="Soma()"]');
+            for(var x=0; x<ipts.length; x++){
+                var valorItem = parseFloat(ipts[x].value);
+            if(soma ===0)
+                soma = valorItem;
+            else{
+                !isNaN(valorItem) ? soma *= parseFloat(valorItem) : null;
+            console.log(soma);
+       }
+    }
+
+    document.querySelector('#final').value = soma.toFixed(5);
+}
+
+
         document.getElementById("myForm").addEventListener("submit", function(event){
             event.preventDefault();
             var Nome = document.getElementById("nome").value;
