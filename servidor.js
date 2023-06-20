@@ -21,15 +21,15 @@ http.createServer(
         var Nome = querystring['nome'];
         var Email = querystring['email'];
 
-        var SQL = "INSERT INTO agenda(Nome, Endereco) VALUES ('" + Nome + "', '" + Email + "')";
+        var SQL = "INSERT INTO registro(nome, email) VALUES ('" + Nome + "', '" + Email + "')";
         console.log(SQL);
 
         var mysql = require('mysql2');
         var con = mysql.createConnection({
-            host: "localhost",
+            host: "localhost:3306",
             user: "root",
             password: "minhasenha123456",
-            database: "aula3005"
+            database: "sistema_de_orçamento"
         });
 
         if (Nome != undefined && Bairro != undefined) {
