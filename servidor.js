@@ -1,7 +1,7 @@
 
 const {response} = require ('express');
 var http = require('http');
-var url = require('url');       /* Para recuperar nome e bairro passados do arquivo HTML */
+var url = require('url');       /* Para recuperar nome e email passados do arquivo HTML */
 
 http.createServer(
     function(req, res){
