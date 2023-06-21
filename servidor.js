@@ -20,8 +20,9 @@ http.createServer(
         var querystring = url.parse(req.url, true).query;
         var Nome = querystring['nome'];
         var Email = querystring['email'];
+        var Total = querystring['total'];
 
-        var SQL = "INSERT INTO registro(nome, email) VALUES ('" + Nome + "', '" + Email + "')";
+        var SQL = "INSERT INTO registro(nome, email, total) VALUES ('" + Nome + "', '" + Email + "', '"+ Total +"')";
         console.log(SQL);
 
         var mysql = require('mysql2');
@@ -32,7 +33,7 @@ http.createServer(
             database: "sistema_de_orçamento"
         });
 
-        if (Nome != undefined && Bairro != undefined) {
+        if (Nome != undefined && Email != undefined) {
             con.connect(function(err){
                 if(err) throw err;
                 console.log("Conexao realizada com sucesso");
