@@ -110,27 +110,26 @@
         <form action="">
         Total todos os produtos: <input type="text" id="final">
         </form>
+        <br>
+            <br>
+        <input type = "submit" value = "Confirmar">
+
     </form>
 
     <script>
 
         //Função para fazer o cálculo do valor final
         function Calcula(){
-            var soma = 0;
-            var ipts = document.querySelectorAll('input[oninput="Soma()"]');
-            for(var x=0; x<ipts.length; x++){
-                var valorItem = parseFloat(ipts[x].value);
-            if(soma ===0)
-                soma = valorItem;
-            else{
-                !isNaN(valorItem) ? soma *= parseFloat(valorItem) : null;
-            console.log(soma);
-       }
-    }
-
-    document.querySelector('#final').value = soma.toFixed(2);
-}
-
+            var total = 0;
+            var inputs = document.querySelectorAll('input[name^="Quantidade produto"]');
+            var prices = ['155.90', '137.90', '230.00', '125.00', '130.00'];
+            for (var i = 0; i < inputs.length; i++) {
+                var quantity = parseInt(inputs[i].value) || 0;
+                var price = parseFloat(prices[i]);
+                total += quantity * price;
+            }
+            document.getElementById('final').value = total.toFixed(2);
+        }
 
         document.getElementById("myForm").addEventListener("submit", function(event){
             event.preventDefault();
