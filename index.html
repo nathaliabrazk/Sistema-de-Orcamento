@@ -1,31 +1,27 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
     <title>Cadastro de produtos</title>
 </head>
-
-<body>
-    
     <h1>Formulário de cadastro</h1>
-  <p>Preencha os campos a seguir:</p>
-    
-    <form id = "myForm">
-        <label for = "nome">Nome:</label>
-        <input type = "text" id = "nome" name = "nome">
-        <label for = "email">Email:</label>
-        <input type = "text" id = "email" name = "email">
-        <input type = "submit" value = "Enviar">
-            <br>
-                <br>
-                    <br>
+    <p>Preencha os campos a seguir:</p>
+<body>
+    <style>
+        
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            background-image:url("fundo pagina.jpg");
+            text-align: center;
+        }
+    </style>
 
         <!--Inserção da imagens e seus respectivos valores -->
         <div class="box">
             <p><center>Illuminated Planet</center></p>
-            <img src="Illuminated planet.jpeg" value= 155,90 height="200" width="150">
+            <img src="Illuminated planet.jpeg" value= 155,90 height="330" width="250">
             <span><center>R$155,90
                 <br>
                 (unidade)
@@ -39,8 +35,8 @@
         </div>
 
         <div class="box">
-            <p><center>Bright Moon</center></p>
-            <img src="BrightMoon.jpeg" value= 137,90 height="200" width="150"/>
+            <p><center>Pearl Light</center></p>
+            <img src="PearlLight.jpg" value= 137,90 height="330" width="250"/>
             <span><center>R$137,90
                 <br>
                 (unidade)
@@ -55,7 +51,7 @@
 
         <div class="box">
             <p><center>Fairy Ferris Wheel</center></p>
-            <img src="FairyFerrisWheel.jpeg" value= 230,00 height="200" width="150"/>
+            <img src="FairyFerrisWheel.jpeg" value= 230,00 height="330" width="250"/>
             <span><center>R$230,00
                 <br>
                 (unidade)
@@ -70,7 +66,7 @@
         
         <div class="box">
             <p><center>Luminous Heart</center></p>
-            <img src="LuminousHeart.jpeg"value= 125,00 height="200" width="150"/>
+            <img src="LuminousHeart.jpeg"value= 125,00 height="330" width="250"/>
             <span><center>R$125,00
                 <br>
                 (unidade)
@@ -84,8 +80,9 @@
         </div></center>
 
         <div class="box">
-            <p><center>Light Cactus</center></p>
-            <img src="LightCactus.jpeg" value= 130,00 height="200" width="150"/>
+            <!--título-->
+                <p><center>Light Cactus</center></p>
+            <img src="LightCactus.jpeg" value= 130,00 height="330" width="250"/>
             <span><center>R$130,00
                 <br>
                 (unidade)
@@ -100,17 +97,34 @@
         <br>
             <br>
         <style>
-        div.box {
+
+        .box {
             width: 150px;
-            display: inline-block;
+            display:inline-table;
+            background-color: rgb(212, 167, 167);
+            padding: 3%;
+            text-align: center;
+            
         }
+        a{
+                text-decoration: none;
+                color: rgb(66, 41, 41);
+                border: 3px solid rgb(136, 68, 68);
+                border-radius: 10px;
+                padding: 20px;
+            }
+            a:hover{
+                background-color: rgb(187, 127, 127);
+                transition: .3s;
+            }
 
         </style>
+
         <form action="">
-        Total todos os produtos: <input type="text" id="final">
+            Total a pagar: <input type="text" id="final">
         </form>
         <br>
-        <button onclick="Calcuar()">Confirmar</button>
+        <button onclick="Calcula()">Confirmar</button>
         
     </form>
 
